@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "fullName": "dev_a",
+      "email": "dev_a@mail.com",
+      "vote": 0,
+      "createdAt": "2023-02-14T08:49:46.328Z",
+      "questionTitle": "How to redirect only 3rd party referral traffic from domain A to domain B",
+      "question": "<p>Hi I am having a major issue figuring out how to split and redirect traffic from my source domain to 2 different domains.</p><p>Situation: We printed 1000s of boxes with the wrong QR code and our designer used STATIC QR codes which cannot be changed or edited. I have a total of 11 pages that need to be redirected with two different conditions - if that traffic is coming from a scan from the QR code, go to domain A. If traffic is coming from google or typing in the URL, go to domain B. need to be able to split the traffic and keep direct traffic (aka if they type my domain in or type it on Google) going to the primary domain, while redirecting the referred traffic to a secondary domain. I know its possible with php, javascript or script... So far I have come up with this, and its not working.</p><blockquote><p>if (document.referrer !== \"http://example.com\") {\n &nbsp; &nbsp;window.location.href = \"http://example2.com\";\n}\n</p></blockquote><p>Ive been researching on google and I've found info that I can add parameters to my website URL that will redirect the traffic. I've also found some info that javascript may be able to help. Thank you so much in advance!</p>",
+      "id": 1
+    }
+  ],
+  "answers": [
+    {
+      "fullName": "answer_a",
+      "email": "answer@mai.com",
+      "vote": 0,
+      "createdAt": "2023-02-14T08:56:48.453Z",
+      "answer": "<blockquote><p>let domain = (new URL(document.referrer)).hostname;\nif (domain === \"stackoverflow.com\") {\n &nbsp;console.log(\"Refferer is stackoverflow.com\");\n} else {\n &nbsp;console.log(\"Do some stuff\");\n}</p></blockquote>",
+      "questionId": 1,
+      "id": 1
+    }
+  ]
+}

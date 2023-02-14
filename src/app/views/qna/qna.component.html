@@ -1,0 +1,26 @@
+<app-question-card-component
+    [question]="question"
+    [questionDetail]="true"
+></app-question-card-component>
+
+<div *ngIf="answer.length; else emptyAnswer">
+    <h3 class="answer-title mt-3">{{ answer.length }} Answers</h3>
+
+    <div *ngFor="let item of answer">
+        <hr/>
+        <app-answer-card-component [answer]="item"></app-answer-card-component>
+    </div>
+
+    <hr class="mt-5"/>
+</div>
+
+<ng-template #emptyAnswer>
+    <p class="answer-empty">Know someone who can answer?</p>
+</ng-template>
+
+<h5 class="my-5">Your Answer</h5>
+
+<app-form-answer-component
+    (onUpdateAnswerList)="findAllAnswer()"
+    [questionId]="id"
+></app-form-answer-component>

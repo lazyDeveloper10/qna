@@ -1,0 +1,19 @@
+<div class="mt-2">
+    <div class="row p-2">
+        <div class="col-md-6">
+            <h1>Question List</h1>
+        </div>
+
+        <div class="col-md-6 d-flex justify-content-md-end">
+            <app-form-question-component
+                (onUpdateQuestionList)="findAllQuestion()"
+            ></app-form-question-component>
+        </div>
+    </div>
+
+
+    <div *ngFor="let item of question">
+        <hr/>
+        <app-question-card-component [question]="item"></app-question-card-component>
+    </div>
+</div>

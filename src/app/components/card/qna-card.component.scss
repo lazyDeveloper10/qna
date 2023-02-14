@@ -1,0 +1,26 @@
+.vote-container {
+    width: 75px;
+    height: 75px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.qna-wrapper {
+    &-info {
+        font-size: 14px;
+        font-style: italic;
+    }
+}
+
+.question-body {
+    height: 32px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

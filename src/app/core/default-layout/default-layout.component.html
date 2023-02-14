@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <button (click)="toggleNavbar()" type="button" class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" routerLink="/">Navbar</a>
+        <div class="navbar-collapse collapse" [ngClass]="{ 'show': navbarOpen }">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- Content here -->
+    <router-outlet></router-outlet>
+</div>
